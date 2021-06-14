@@ -3,6 +3,12 @@
 
 
 
+sf::Vector2f statek_kosmiczny::get_position()
+{
+	
+	return this->sprite.getPosition();
+}
+
 statek_kosmiczny::statek_kosmiczny()
 {
 	this->texture.loadFromFile("statek2.png");
@@ -19,7 +25,6 @@ void statek_kosmiczny::Kolizja()
 {
 	pozycja = this->sprite.getPosition();
 	bounds = this->sprite.getGlobalBounds();
-	std::cout << bounds.left << std::endl << bounds.top << std::endl << bounds.height << std::endl << bounds.width << std::endl;
 }
 
 void statek_kosmiczny::animuj(sf::RenderTarget &target, sf::Event &ev, float time)

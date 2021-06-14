@@ -1,15 +1,15 @@
 #include "pocisk.h"
 
-pocisk::pocisk()
+pocisk::pocisk(sf::Vector2f vec)
 {
 	this->texture.loadFromFile("pocisk.png");
 	this->sprite.setTexture(texture);
 	this->sprite.setScale(0.8f, 0.8f);
 	this->bounds = statek_kosmiczny::sprite.getGlobalBounds();
 
-	this->sprite.setPosition(bounds.left, bounds.top);
+	this->sprite.setPosition(vec.x-33,vec.y);
 
-	this->velocity.x = 0; this->velocity.y = 0;
+	this->velocity.x = 0; this->velocity.y = -50;
 }
 
 pocisk::~pocisk()

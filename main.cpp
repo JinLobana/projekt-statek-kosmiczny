@@ -4,6 +4,9 @@
 #include "pocisk.h"
 //#include "gra.h"
 #include <vector>
+#include <cstdlib>
+#include <chrono>
+#include <thread>
 
 int main()
 {
@@ -53,8 +56,9 @@ int main()
             case sf::Mouse::Button::Left:
                 break;
             case sf::Keyboard::Key::Space:
-                pocisk* p = new pocisk;
+                pocisk* p = new pocisk(statek.get_position());
                 pociski.push_back(p);
+                //std::this_thread::sleep_for(2000ms);
                 break;
                 /*case sf::Keyboard::Key::Escape:
                     okno.close();

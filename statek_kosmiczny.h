@@ -16,6 +16,8 @@ protected:
 	sf::Vector2f pozycja;
 
 public:
+	sf::Vector2f get_position();
+
 	statek_kosmiczny();
 	void Kolizja();
 	void animuj(sf::RenderTarget& target, sf::Event& ev, float time);
